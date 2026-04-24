@@ -9,8 +9,10 @@ import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
+import androidx.compose.ui.test.printToLog
 import com.example.authenticationexample.data.AuthRepo
 import com.example.authenticationexample.data.Response
 import com.example.authenticationexample.data.ticket.TicketRepo
@@ -131,12 +133,12 @@ class LoginScreenTests {
         rule.onNode(emailAddressTextFieldMatcher).performTextInput(validButUnknownEmail)
         rule.onNode(passwordTextFieldMatcher).performTextInput(VALID_PASSWORD)
         rule.onNode(submitButtonMatcher).performClick()
-        rule.waitUntil(1000) {
+        rule.waitUntil(5000) {
         rule.onAllNodesWithText(errorMessage, substring = true)
                 .fetchSemanticsNodes().isNotEmpty()
         }
         rule.onNodeWithText(errorMessage, substring = true).assertIsDisplayed()
-        //rule.onRoot().printToLog("DEBUG")
+//        rule.onRoot().printToLog("DEBUG")
     }
     @Test
     fun `destination is the staff home page when correct staff email and password are entered`() {

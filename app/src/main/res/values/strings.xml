@@ -21,8 +21,10 @@
     <string name="view_ticket_button">View Ticket</string>
     <string name="delete_ticket_button">Delete Ticket</string>
     <string name="cancel_deletion_button">Cancel</string>
+    <string name="confirm_deletion_button">Confirm</string>
     <string name="confirm_deletion_dialog_heading">Confirm ticket deletion?</string>
-    <string name="confirm_deletion_dialog_message">This will delete your ticket and all related notes</string>
+    <string name="confirm_deletion_dialog_message">This will delete your ticket and all related
+notes</string>
     <!-- Manager Edit Ticket Screen -->
     <string name="manager_edit_ticket">Edit Ticket</string>
     <string name="update_status_of_ticket_button">Update Status</string>
@@ -31,13 +33,13 @@
     <string name="note_text">Note Details</string>
     <string name="note_text_error_message">Note is blank</string>
     <!-- LoginScreen -->
-    <string name="login_screen">Login</string> // added by Dale
+    <string name="login_screen">Login Screen</string>"
     <string name="email">Email</string>
     <string name="email_error_message">Please insert a valid email.</string>
     <string name="password">Password</string>
     <string name="password_error_message">Please insert a valid password</string>
     <!-- Sign Up Screen -->
-    <string name="sign_up_screen">Signup</string> // added by Dale
+    <string name="sign_up_screen">Sign Up Screen</string>"
     <string name="verify_email">Verify email</string>
     <string name="forgot_password">Forgot password</string>
     <string name="sign_up_button">Sign Up</string>

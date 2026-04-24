@@ -15,6 +15,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.authenticationexample.R
 import com.example.authenticationexample.data.Response
@@ -38,8 +40,12 @@ fun SignUpScreen(modifier: Modifier = Modifier,
     }
 
     val response = vm.signUpResponse
+    val signUpScreenDesc = stringResource(R.string.sign_up_screen)
 
-    Scaffold(snackbarHost = {
+    Scaffold(
+        modifier = modifier.semantics {
+            contentDescription = signUpScreenDesc },
+        snackbarHost = {
             SnackbarHost(hostState = snackbarHostState) },
         content = { padding ->
             Column(

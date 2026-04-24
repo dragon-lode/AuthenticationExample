@@ -1,5 +1,6 @@
 package com.example.authenticationexample.navigation
 
+import android.app.Activity
 import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -7,7 +8,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.core.app.ActivityCompat.finishAffinity
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -110,7 +113,9 @@ fun NavigationGraph(modifier: Modifier = Modifier,
         composable(NavScreen.EXIT.route) {
             val authViewModel: AuthViewModel = hiltViewModel()
             authViewModel.signOut()
-            exitProcess(0)
+            //exitProcess(0)
+            val context = LocalContext.current
+            finishAffinity(context as Activity)
         }
     }
 }

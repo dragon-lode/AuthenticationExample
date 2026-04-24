@@ -23,6 +23,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
@@ -50,9 +52,11 @@ fun ManagerHomeScreen(modifier: Modifier = Modifier,
     val items by vm.items.collectAsStateWithLifecycle()
     var selectedIndexToHighlight by remember { mutableIntStateOf(-1) }
     var showDeletionConfirmationDialog by remember { mutableStateOf(false) }
-
+    val ManagerHomeScreenDesc = stringResource(R.string.manager_home)
     Scaffold(
-        modifier = modifier,
+        modifier = modifier.semantics {
+            contentDescription = ManagerHomeScreenDesc
+        },
         bottomBar = {
             BottomNavBar(userRole, navController = navController)
         }
@@ -126,7 +130,7 @@ fun ManagerHomeScreen(modifier: Modifier = Modifier,
                             selectedIndexToHighlight = -1
                         }
                     ) {
-                        Text(stringResource(R.string.delete_ticket_button),
+                        Text(stringResource(R.string.confirm_deletion_button),
                                 color = Color.Red)
                     }
                 },

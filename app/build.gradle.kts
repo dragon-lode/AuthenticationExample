@@ -55,6 +55,9 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.compose.ui.test)
     implementation(libs.androidx.runner)
+    implementation(libs.androidx.navigation.testing)
+    implementation(libs.androidx.ui.test)
+    implementation(libs.androidx.ui)
 
     val hiltVersion = "2.57.2"
     androidTestImplementation("com.google.dagger:hilt-android-testing:$hiltVersion")

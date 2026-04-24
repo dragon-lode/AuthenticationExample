@@ -6,8 +6,11 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hierarchy
@@ -29,6 +32,9 @@ private fun createListOfItems(userRole: UserRole): List<NavScreen> {
 fun BottomNavBar(userRole: UserRole,
                  navController: NavController) {
     NavigationBar(
+        modifier = Modifier.semantics {
+            contentDescription = "bottom navigation bar"
+        },
         containerColor = Color.White,
         contentColor = Color.Black
     ) {

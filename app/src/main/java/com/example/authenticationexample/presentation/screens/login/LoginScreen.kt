@@ -14,6 +14,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.authenticationexample.R
 import com.example.authenticationexample.data.Response
@@ -55,8 +57,13 @@ fun LoginScreen(modifier: Modifier = Modifier,
             snackbarHostState.showSnackbar(response.e.message ?: "An unexpected error occurred")
         }
     }
+    val loginScreenDesc = stringResource(R.string.login_screen)
 
-    Scaffold(snackbarHost = {
+    Scaffold(
+        modifier = modifier.semantics {
+            contentDescription = loginScreenDesc
+        },
+        snackbarHost = {
             SnackbarHost(hostState = snackbarHostState) },
         content = { padding ->
         val keyboard = LocalSoftwareKeyboardController.current
