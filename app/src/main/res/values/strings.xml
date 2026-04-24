@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">AuthenticationExample</string>
+    <string name="id_hint">Id</string>
+    <string name="id_error_message">Id is blank</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="first_name_error_message">Firstname is blank</string>
+    <string name="surname_hint">Surname</string>
+    <string name="surname_error_message">Surname is blank</string>
+    <string name="tel_no_hint">Telephone number</string>
+    <string name="tel_no_error_message">Telephone number is blank</string>
+    <string name="description_hint">Description</string>
+    <string name="description_error_message">Description is blank</string>
+    <!-- Add Ticket Screen -->
+    <string name="add_ticket">Add Ticket</string>
+    <string name="title_hint">Title</string>
+    <string name="title_error_message">Title is blank</string>
+    <!-- Home Screen -->
+    <string name="staff_home">Staff Home</string>
+    <!-- Manager Home Screen -->
+    <string name="manager_home">Manager Home</string>
+    <string name="view_ticket_button">View Ticket</string>
+    <string name="delete_ticket_button">Delete Ticket</string>
+    <string name="cancel_deletion_button">Cancel</string>
+    <string name="confirm_deletion_dialog_heading">Confirm ticket deletion?</string>
+    <string name="confirm_deletion_dialog_message">This will delete your ticket and all related notes</string>
+    <!-- Manager Edit Ticket Screen -->
+    <string name="manager_edit_ticket">Edit Ticket</string>
+    <string name="update_status_of_ticket_button">Update Status</string>
+    <string name="status_options">Status Options</string>
+    <string name="add_note_button">Add Note</string>
+    <string name="note_text">Note Details</string>
+    <string name="note_text_error_message">Note is blank</string>
+    <!-- LoginScreen -->
+    <string name="login_screen">Login</string> // added by Dale
+    <string name="email">Email</string>
+    <string name="email_error_message">Please insert a valid email.</string>
+    <string name="password">Password</string>
+    <string name="password_error_message">Please insert a valid password</string>
+    <!-- Sign Up Screen -->
+    <string name="sign_up_screen">Signup</string> // added by Dale
+    <string name="verify_email">Verify email</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="sign_up_button">Sign Up</string>
+    <!-- Buttons -->
+    <string name="add_ticket_button">Add</string>
+    <string name="back_button">Back</string>
+    <string name="submit_button">Submit</string>
+</resources>
